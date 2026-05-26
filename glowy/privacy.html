@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glowy — Privacy Policy</title>
+  <link rel="stylesheet" href="../_shared.css">
+</head>
+<body>
+<main>
+  <p class="nav"><a href="../">← All apps</a></p>
+
+  <h1>Glowy Privacy Policy</h1>
+  <p class="updated">Last updated: May 25, 2026</p>
+
+  <h2>Summary</h2>
+  <p>Glowy ("the App") does not collect, store, or transmit any personal data, usage analytics, or device information. Everything you do in the app stays on your device or on the local Wi-Fi link with the other phone you're playing against.</p>
+
+  <h2>What information is collected</h2>
+  <p>None. Glowy does not have a backend server, account system, login, or analytics.</p>
+
+  <h2>What information is shared with third parties</h2>
+  <p>None. No third-party SDKs, advertisers, analytics providers, or data brokers are integrated.</p>
+
+  <h2>Local data</h2>
+  <p>Glowy stores the following on your device only:</p>
+  <ul>
+    <li>Your chosen display name (used so the other phone knows who you are during a multiplayer match).</li>
+    <li>Your selected background theme.</li>
+    <li>Your per-game cosmetic preferences — Memory deck theme, Spotter fleet theme, Push Card tile patterns (yours and the AI's), Mojong tile suits.</li>
+    <li>The local-network permission status, managed by iOS.</li>
+  </ul>
+  <p>This data lives entirely in iOS UserDefaults and is removed when you uninstall the app. It is never transmitted off your device except via the device-to-device multiplayer messages described next.</p>
+
+  <h2>Multiplayer connections</h2>
+  <p>When you tap "Host a game" or "Join a game," Glowy uses Apple's MultipeerConnectivity framework to discover and connect to another iPhone running Glowy on the same Wi-Fi network. The only information exchanged is:</p>
+  <ul>
+    <li>Your chosen display name</li>
+    <li>Game state messages — the seed for the match and your moves (e.g. "tile pushed into column 3," "card flipped at index 7," "tile discarded," "shot fired at row 4 column 6")</li>
+    <li>Your selected cosmetic theme for the current match, so both phones render the right tile faces or fleet emojis</li>
+  </ul>
+  <p>These messages travel directly between the two phones over an encrypted peer-to-peer connection. Nothing is logged or sent to any server.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Glowy is rated 4+. Because Glowy collects no data of any kind, it complies with COPPA and similar regulations by design.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted here with a new "Last updated" date.</p>
+
+  <h2>Support</h2>
+  <p>For support or questions about this policy, contact <a href="mailto:bernouli@gmail.com">bernouli@gmail.com</a>. Or visit the <a href="support.html">support page</a>.</p>
+</main>
+</body>
+</html>
