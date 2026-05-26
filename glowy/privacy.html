@@ -33,13 +33,13 @@
   <p>This data lives entirely in iOS UserDefaults and is removed when you uninstall the app. It is never transmitted off your device except via the device-to-device multiplayer messages described next.</p>
 
   <h2>Multiplayer connections</h2>
-  <p>When you tap "Host a game" or "Join a game," Glowy uses Apple's MultipeerConnectivity framework to discover and connect to another iPhone running Glowy on the same Wi-Fi network. The only information exchanged is:</p>
+  <p>When you tap "Host a game" or "Join a game," Glowy uses Apple's MultipeerConnectivity framework to discover and connect to another iPhone running Glowy nearby. iOS uses Wi-Fi (same network or device-to-device) and Bluetooth as available — no internet connection is involved. The only information exchanged is:</p>
   <ul>
     <li>Your chosen display name</li>
     <li>Game state messages — the seed for the match and your moves (e.g. "tile pushed into column 3," "card flipped at index 7," "tile discarded," "shot fired at row 4 column 6")</li>
     <li>Your selected cosmetic theme for the current match, so both phones render the right tile faces or fleet emojis</li>
   </ul>
-  <p>These messages travel directly between the two phones over an encrypted peer-to-peer connection. Nothing is logged or sent to any server.</p>
+  <p>These messages travel directly between the two phones over an encrypted peer-to-peer connection on your local Wi-Fi or Bluetooth — never the internet. Nothing is logged or sent to any server.</p>
 
   <h2>Children's privacy</h2>
   <p>Glowy is rated 4+. Because Glowy collects no data of any kind, it complies with COPPA and similar regulations by design.</p>
