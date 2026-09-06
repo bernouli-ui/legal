@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conch — Privacy Policy</title>
+  <link rel="stylesheet" href="../_shared.css">
+</head>
+<body>
+<main>
+  <p class="nav"><a href="../">← All apps</a></p>
+
+  <h1>Conch Privacy Policy</h1>
+  <p class="updated">Last updated: September 6, 2026</p>
+
+  <h2>Summary</h2>
+  <p>Conch ("the App") does not collect, store, or transmit any personal data, usage analytics, or device information to its developer. Everything you do in the app stays on your device or goes directly to the SSH servers you choose to connect to.</p>
+
+  <h2>What information is collected</h2>
+  <p>None. Conch has no backend server, account system, login, or analytics.</p>
+
+  <h2>What information is shared with third parties</h2>
+  <p>None. No advertising SDKs, analytics providers, crash reporters, or data brokers are integrated. The App's only network connections are the SSH sessions you initiate, plus Apple's own App Store services if you make a purchase.</p>
+
+  <h2>Local data</h2>
+  <p>Conch stores the following on your device only:</p>
+  <ul>
+    <li>Server profiles you create (label, hostname, port, username)</li>
+    <li>Pinned host-key fingerprints used to verify servers (known hosts)</li>
+  </ul>
+  <p>This metadata lives in iOS UserDefaults and is removed when you uninstall the app. It is never transmitted off your device except to the servers you explicitly connect to.</p>
+
+  <h2>Credentials (Keychain)</h2>
+  <p>Your secrets are stored in the iOS Keychain, not in UserDefaults:</p>
+  <ul>
+    <li>SSH private keys you generate or import (kept as device-only Keychain items)</li>
+    <li>Server passwords you choose to save</li>
+  </ul>
+  <p>Keychain items are protected by the system, marked device-only (never synced to iCloud), and are used solely to authenticate the SSH connections you initiate. They are deleted when you remove the associated key or server, or uninstall the app.</p>
+
+  <h2>Network connections</h2>
+  <p>Conch connects only to the SSH servers you configure. Those connections are end-to-end encrypted by the SSH protocol (modern key exchange and AEAD ciphers). Conch verifies each server's host key on first connection and refuses to connect if it later changes, which protects you against man-in-the-middle attacks. No connection data is routed through, logged by, or sent to the developer or any third party.</p>
+
+  <h2>Purchases</h2>
+  <p>Conch is free. An optional one-time in-app purchase ("Conch Pro") lifts the free-tier limit on saved servers. Purchases are processed entirely by Apple using StoreKit:</p>
+  <ul>
+    <li>Conch never sees or stores your payment details, Apple Account, or email.</li>
+    <li>No third-party payment processor, advertising SDK, or analytics SDK is used.</li>
+    <li>Whether you own Pro is determined by asking StoreKit on-device. Nothing about your purchase is transmitted to the developer, because there is no server to transmit it to.</li>
+  </ul>
+  <p>Apple's handling of the transaction is covered by Apple's own privacy policy.</p>
+
+  <h2>Microphone &amp; speech recognition</h2>
+  <p>If you tap the microphone to dictate a command, Conch uses Apple's Speech framework to transcribe your speech to text. Audio is processed for transcription and is not stored or sent to the developer. The transcript is only inserted into your terminal session when you choose to insert or run it.</p>
+  <p>Depending on your device and language settings, Apple's Speech framework may perform recognition on-device or via Apple's servers. That processing is governed by Apple's privacy policy, not the developer's — Conch itself receives only the resulting text.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Conch is rated 4+. Because Conch collects no data of any kind, it complies with COPPA and similar regulations by design.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted here with a new "Last updated" date. Because the App collects nothing, any change is expected to be clarifying rather than a reduction in privacy.</p>
+
+  <h2>Support</h2>
+  <p>For support or questions about this policy, contact <a href="mailto:viby.apps@gmail.com">viby.apps@gmail.com</a>. Or visit the <a href="support.html">support page</a>.</p>
+</main>
+</body>
+</html>

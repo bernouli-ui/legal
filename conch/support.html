@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conch — Support</title>
+  <link rel="stylesheet" href="../_shared.css">
+</head>
+<body>
+<main>
+  <p class="nav"><a href="../">← All apps</a></p>
+
+  <h1>Conch Support</h1>
+  <p class="updated">Need help with Conch? You're in the right place.</p>
+
+  <h2>About Conch</h2>
+  <p>Conch — <em>Console Over Network, Cryptographically Hardened</em> — is an SSH client for iPhone and iPad. It gives you a real xterm-256color terminal, Ed25519 key authentication, host-key verification to block man-in-the-middle attacks, and voice dictation for typing commands. There are no ads, no analytics, no account, and no backend server.</p>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li><strong>Generate a key.</strong> Open the menu &rsaquo; SSH Keys &rsaquo; Generate Ed25519, then copy the public key.</li>
+    <li><strong>Authorize it on your server.</strong> Append that public key as a new line in <code>~/.ssh/authorized_keys</code> on the machine you want to reach.</li>
+    <li><strong>Add the server.</strong> Tap + and enter the hostname or IP, the port (22 unless you changed it), and your username on that machine.</li>
+    <li><strong>Connect and verify.</strong> On the first connection Conch shows the server's host-key fingerprint. Compare it with the output of <code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code> on the server, then tap Trust &amp; Connect.</li>
+  </ol>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>"Authentication failed."</strong> The most common cause is the wrong <em>username</em> — it must be your account on the server, not your own name or "admin". On the server, <code>sudo grep "Invalid user" /var/log/auth.log</code> (or <code>log show --predicate 'process CONTAINS "sshd"' --last 5m</code> on macOS) will show exactly which username was attempted. The second most common cause is that your public key isn't in <code>~/.ssh/authorized_keys</code>, or that file has loose permissions — it must be <code>chmod 600</code>.</li>
+    <li><strong>Password doesn't work, but the key does.</strong> Many servers disable password login entirely (<code>PasswordAuthentication no</code> in <code>/etc/ssh/sshd_config</code> or a file in <code>sshd_config.d/</code>). Use key authentication instead — it's more secure anyway.</li>
+    <li><strong>"Host key changed — refusing to connect."</strong> This is Conch protecting you. It means the server's identity no longer matches what was pinned on your first connection. If you legitimately rebuilt or reinstalled the server, remove it under menu &rsaquo; Known Hosts and reconnect to re-verify. If you didn't change anything, treat it as a genuine warning and investigate before trusting it again.</li>
+    <li><strong>Connection times out on a home or office address.</strong> Local addresses like <code>192.168.x.x</code> require the Local Network permission. Enable it in Settings &rsaquo; Privacy &amp; Security &rsaquo; Local Network &rsaquo; Conch. Also confirm the phone and the server are on the same network — a LAN address is not reachable over cellular.</li>
+    <li><strong>"Connection refused."</strong> Nothing is listening on that port. Confirm the SSH server is running (<code>sudo systemctl status ssh</code> on Linux, or System Settings &rsaquo; General &rsaquo; Sharing &rsaquo; Remote Login on macOS) and that the port matches.</li>
+    <li><strong>Dictation does nothing.</strong> Conch needs both Microphone and Speech Recognition permission. Enable both in Settings &rsaquo; Conch.</li>
+    <li><strong>Can't scroll back in tmux.</strong> That's a server-side tmux setting, not Conch. Add <code>set -g mouse on</code> to <code>~/.tmux.conf</code> on the server and run <code>tmux source-file ~/.tmux.conf</code>. A larger <code>history-limit</code> helps too.</li>
+    <li><strong>Encrypted private key won't import.</strong> Passphrase-protected keys aren't supported yet. Decrypt a copy with <code>ssh-keygen -p</code>, or generate a fresh key in Conch.</li>
+  </ul>
+
+  <h2>Free and Pro</h2>
+  <p>Conch is free and fully functional — key authentication, host verification, the terminal, and voice dictation all work without paying, and there are no ads. The free tier saves up to 3 servers; <strong>Conch Pro</strong> is a one-time purchase that makes that unlimited and includes any Pro features added later. It supports Family Sharing, and <em>Restore Purchase</em> on the upgrade screen recovers it on a new device.</p>
+
+  <h2>Reporting a bug</h2>
+  <p>If something isn't working, please email me with:</p>
+  <ul>
+    <li>What you were doing and what you saw happen</li>
+    <li>Whether you were using key or password authentication</li>
+    <li>The server's operating system and SSH version (<code>ssh -V</code>) if you know it</li>
+    <li>Your iPhone model and iOS version (Settings &rsaquo; General &rsaquo; About)</li>
+    <li>Your Conch version (App Store &rsaquo; Conch)</li>
+  </ul>
+  <p>Please never send private keys, passwords, or full terminal transcripts — redact anything sensitive first.</p>
+
+  <h2>Contact</h2>
+  <p>For bug reports, feature requests, or questions, email <a href="mailto:viby.apps@gmail.com">viby.apps@gmail.com</a>. Conch is a one-person project, so please be patient if I take a couple of days to reply.</p>
+
+  <h2>Privacy</h2>
+  <p>Conch collects no data. See the <a href="privacy.html">privacy policy</a> for details.</p>
+</main>
+</body>
+</html>
