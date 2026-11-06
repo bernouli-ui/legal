@@ -11,6 +11,7 @@ Hosted via GitHub Pages at https://bernouli-ui.github.io/legal/.
 - **Glowy** — [privacy](https://bernouli-ui.github.io/legal/glowy/privacy.html) · [support](https://bernouli-ui.github.io/legal/glowy/support.html)
 - **Mahjong Points** — [privacy](https://bernouli-ui.github.io/legal/mahjong-points/privacy.html) · [support](https://bernouli-ui.github.io/legal/mahjong-points/support.html)
 - **Todori** — [privacy](https://bernouli-ui.github.io/legal/todori/privacy.html) · [support](https://bernouli-ui.github.io/legal/todori/support.html)
+- **Forte** — [privacy](https://bernouli-ui.github.io/legal/forte/privacy.html) · [support](https://bernouli-ui.github.io/legal/forte/support.html)
 
 ## Adding a new app
 
