@@ -13,6 +13,7 @@ Hosted via GitHub Pages at https://bernouli-ui.github.io/legal/.
 - **Todori** — [privacy](https://bernouli-ui.github.io/legal/todori/privacy.html) · [support](https://bernouli-ui.github.io/legal/todori/support.html)
 - **Forte** — [privacy](https://bernouli-ui.github.io/legal/forte/privacy.html) · [support](https://bernouli-ui.github.io/legal/forte/support.html)
 - **Chess Guru** — [privacy](https://bernouli-ui.github.io/legal/chess-guru/privacy.html) · [support](https://bernouli-ui.github.io/legal/chess-guru/support.html)
+- **Zero Incidents** — [privacy](https://bernouli-ui.github.io/legal/zero-incidents/privacy.html) · [support](https://bernouli-ui.github.io/legal/zero-incidents/support.html)
 
 ## Adding a new app
 
